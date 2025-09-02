@@ -1,15 +1,13 @@
-import { Text, View } from "react-native";
+import React from "react";
+import { Stack } from "expo-router";
+import Calculator from "./Calculator"; // hoặc code Calculator của bạn ở đây
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <>
+      {/* Ẩn header hoặc đổi title */}
+      <Stack.Screen options={{ headerShown: false }} />
+      <Calculator />
+    </>
   );
 }
